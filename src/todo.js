@@ -1,6 +1,5 @@
 export class Todo {
-  constructor(description) {
-    this.description = description;
-    this.done = false;
-  }
+  done = false;
+
+  constructor(public description: string) { }
 }
