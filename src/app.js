@@ -1,7 +1,7 @@
 import {Todo} from './todo';
 
 export class App {
-  heading = 'Todos'; //this was doube quotes in the documentation
+  heading = 'Todos';
   todos: Todo[] = [];
   todoDescription = '';
 
