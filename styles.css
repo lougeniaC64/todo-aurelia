@@ -1,0 +1,9 @@
+.completed-todo {
+    text-decoration: line-through;
+    color: lightgrey;
+}
+
+.todo {
+    text-decoration: none;
+    color: black;
+}
