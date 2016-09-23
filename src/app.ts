@@ -1,6 +1,5 @@
 import {Todo} from './todo';
 import {config} from './config';
-import r = require('../node_modules/rethinkdb/rethinkdb')
 
 export class App {
   heading = 'Todos';
