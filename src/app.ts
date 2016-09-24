@@ -13,6 +13,12 @@ export class App {
     }
   }
 
+  editTodo(description) {
+    if(this.todoDescription) {
+      console.log(description);
+    }
+  }
+
   removeTodo(todo) {
     let index = this.todos.indexOf(todo);
     if (index !== -1) {
