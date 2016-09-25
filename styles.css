@@ -3,6 +3,12 @@
     color: lightgrey;
 }
 
+.editable-todo {
+    text-decoration: none;
+    color: black;
+    border-style: solid;
+}
+
 .todo {
     text-decoration: none;
     color: black;
