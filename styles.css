@@ -1,6 +1,8 @@
 .completed-todo {
     text-decoration: line-through;
     color: lightgrey;
+    border-style: none;
+    display: inline;
 }
 
 .editable-todo {
