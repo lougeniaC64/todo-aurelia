@@ -13,10 +13,10 @@ export class App {
     }
   }
 
-  editTodo(description) {
-    if(this.todoDescription) {
-      console.log(description);
-    }
+  editTodo() {
+    //if(this.todoDescription) {
+      console.log('test description');
+    //}
   }
 
   removeTodo(todo) {
