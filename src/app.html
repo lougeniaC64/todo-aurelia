@@ -10,6 +10,7 @@
     <li repeat.for="todo of todos">
       <input type="checkbox" checked.bind="todo.done">
       <input type="text" class="${todo.done ? 'completed-todo' : 'todo'}" value="${todo.description}" readonly/>
+      <button click.trigger="editTodo()">Edit</button>
       <button click.trigger="removeTodo(todo)">Remove</button>
     </li>
   </ul>
