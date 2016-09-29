@@ -9,7 +9,7 @@
   <ul>
     <li repeat.for="todo of todos">
       <input type="checkbox" checked.bind="todo.done">
-      <input type="text" class="${todo.done ? 'completed-todo' : 'todo'}" value.bind="todo.description" readonly.one-way="todo.done"/>
+      <input type="text" class="${todo.done ? 'completed-todo' : 'todo'}" value.bind="todo.description" change.delegate="editTodoDescription()" readonly.one-way="todo.done"/>
       <button class="${todo.done ? 'hidden' : ''}" click.trigger="editTodoDescription()">Edit</button>
       <button click.trigger="removeTodo(todo)">Remove</button>
     </li>
