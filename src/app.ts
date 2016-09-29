@@ -14,7 +14,7 @@ export class App {
   }
 
   editTodoDescription() {
-    
+    console.log('yessssss');
   }
 
   removeTodo(todo) {
