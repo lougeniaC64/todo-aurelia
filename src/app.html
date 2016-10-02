@@ -3,18 +3,16 @@
 
   <form submit.trigger="addTodo()">
     <input type="text" value.bind="todoDescription"/>
-    <button type="submit">
+    <button type="submit" class="btn btn-sm btn-default" aria-label="Left Align">
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
     </button>
   </form>
-  <!--<button type="button" class="btn btn-default" aria-label="Left Align">
-  </button>-->
   <ul>
     <li repeat.for="todo of todos">
       <input type="checkbox" checked.bind="todo.done">
       <input type="text" class="${todo.done ? 'completed-todo' : 'todo'}" 
         value.bind="todo.description" readonly.one-way="todo.done"/>
-      <button click.trigger="removeTodo(todo)">
+      <button type="button" click.trigger="removeTodo(todo)" class="btn btn-sm btn-default" aria-label="Left Align">
         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
     </li>
