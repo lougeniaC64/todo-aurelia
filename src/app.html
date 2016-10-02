@@ -3,15 +3,20 @@
 
   <form submit.trigger="addTodo()">
     <input type="text" value.bind="todoDescription"/>
-    <button type="submit">Add Todo</button>
+    <button type="submit">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </button>
   </form>
-
+  <!--<button type="button" class="btn btn-default" aria-label="Left Align">
+  </button>-->
   <ul>
     <li repeat.for="todo of todos">
       <input type="checkbox" checked.bind="todo.done">
       <input type="text" class="${todo.done ? 'completed-todo' : 'todo'}" 
         value.bind="todo.description" readonly.one-way="todo.done"/>
-      <button click.trigger="removeTodo(todo)">Remove</button>
+      <button click.trigger="removeTodo(todo)">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
     </li>
   </ul>
 </template>
