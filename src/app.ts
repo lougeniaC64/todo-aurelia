@@ -8,7 +8,7 @@ export class App {
 
   addTodo() {
     if (this.todoDescription) {
-      this.todos.push(new Todo(this.todoDescription));
+      this.todos.push(new Todo(this.todoDescription, false));
       this.todoDescription = '';
     }
   }
