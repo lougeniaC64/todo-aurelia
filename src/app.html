@@ -3,7 +3,7 @@
 
   <form submit.trigger="addTodo()">
     <input type="text" value.bind="todoDescription"/>
-    <!--<input type="date" value.bind="" />-->
+    <input type="date" value.bind="this.todoDueDate" />
     <button type="submit" class="btn btn-sm btn-default" aria-label="Left Align">
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
     </button>
@@ -12,10 +12,11 @@
     <li repeat.for="todo of todos">
       <input type="checkbox" checked.bind="todo.done">
       <input type="text" class="${todo.done ? 'completed-todo' : 'todo'}" 
-        value.bind="todo.description" readonly.one-way="todo.done"/>
+        value.bind="getTodoInfo(todo)" readonly.one-way="todo.done"/>
       <button type="button" click.trigger="removeTodo(todo)" class="btn btn-sm btn-default" aria-label="Left Align">
         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
     </li>
   </ul>
 </template>
+<!--value.bind="todo.description" readonly.one-way="todo.done"/>-->
