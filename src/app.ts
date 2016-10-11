@@ -10,9 +10,8 @@ export class App {
 
   addTodo() {
     if (this.todoDescription) {
-      this.todoDueDate ? 
-        this.todos.push(new Todo(this.todoDescription, this.todoDone, this.todoDueDate)) :
-        this.todos.push(new Todo(this.todoDescription, this.todoDone));
+      var todo = new Todo(this.todoDescription, this.todoDone, this.todoDueDate);
+      this.todos.push(todo);
     }
     this.reset();
   }
@@ -30,6 +29,9 @@ export class App {
   }
 
   getTodoInfo(todo) {
-    return todo.description + ' (Due date: ' + todo.dueDate + ')';
+    if (todo.dueDate) {
+      return todo.description + ' (Due date: ' + todo.dueDate + ')';
+    }
+    return todo.description;
   }
 }
