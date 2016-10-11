@@ -6,12 +6,20 @@ export class App {
   todos: Todo[] = [];
   todoDescription = '';
   todoDueDate = null;
+  todoDone = false;
 
   addTodo() {
     if (this.todoDescription) {
-      this.todos.push(new Todo(this.todoDescription, false, this.todoDueDate));
-      this.todoDescription = '';
+      this.todoDueDate ? 
+        this.todos.push(new Todo(this.todoDescription, this.todoDone, this.todoDueDate)) :
+        this.todos.push(new Todo(this.todoDescription, this.todoDone));
     }
+    this.reset();
+  }
+
+  reset() {
+    this.todoDescription = '';
+    this.todoDueDate = null;
   }
 
   removeTodo(todo) {
