@@ -9,7 +9,6 @@ export class Todo implements ITodo {
   dueDate = null;
 
   constructor(todo: ITodo);
-  //constructor(description: string, done: boolean);
   constructor(description: string, done: boolean, dueDate: Date);
 
   constructor(todoOrDescription: string | ITodo, done?: boolean, dueDate?: Date) {
