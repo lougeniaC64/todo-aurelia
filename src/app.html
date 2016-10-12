@@ -12,7 +12,8 @@
     <li repeat.for="todo of todos">
       <input type="checkbox" checked.bind="todo.done">
       <input type="text" class="${todo.done ? 'completed-todo' : 'todo'}" 
-        value.bind="getTodoInfo(todo)" readonly.one-way="todo.done"/>
+        value.bind="todo.description" readonly.one-way="todo.done"/>
+      <input type="text" value.bind="todo.dueDate" />
       <button type="button" click.trigger="removeTodo(todo)" class="btn btn-sm btn-default" aria-label="Left Align">
         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       </button>
