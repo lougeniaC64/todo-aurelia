@@ -1,7 +1,8 @@
 
 interface ITodo {
-  done: boolean,
-  description: string
+  description: string, 
+  done?: boolean,
+  dueDate?: Date
 }
 export class Todo implements ITodo {
   done = false;
@@ -9,18 +10,18 @@ export class Todo implements ITodo {
   dueDate = null;
 
   constructor(todo: ITodo);
-  constructor(description: string, done: boolean);
-  constructor(description: string, done: boolean, dueDate: Date);
+//   constructor(description: string, done: boolean);
+//   constructor(description: string, done: boolean, dueDate: Date);
 
-  constructor(todoOrDescription: string | ITodo, done?: boolean, dueDate?: Date) {
-        if (typeof todoOrDescription === 'object') {
-            this.description = todoOrDescription.description;
-            this.done = done || false;
-            this.dueDate = dueDate || new Date();
-        } else if (typeof todoOrDescription === 'string' && typeof done === 'boolean') {
-            this.description = todoOrDescription;
-            this.done = done;
-            this.dueDate = dueDate;
-        }
+  constructor(todo: ITodo) {
+        // if (typeof todoOrDescription === 'object') {
+            // this.description = todoOrDescription.description;
+            // this.done = done || false;
+            // this.dueDate = dueDate || new Date();
+        // } else if (typeof todoOrDescription === 'string' && typeof done === 'boolean') {
+            this.description = todo.description;
+            this.done = todo.done;
+            this.dueDate = todo.dueDate;
+        // }
     }
 }
