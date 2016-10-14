@@ -10,7 +10,8 @@ export class App {
 
   addTodo() {
     if (this.todoDescription) {
-      var todo = new Todo(this.todoDescription, this.todoDone, this.todoDueDate);
+      let todo = 
+        new Todo({description: this.todoDescription, done: this.todoDone, dueDate: this.todoDueDate});
       this.todos.push(todo);
     }
     this.reset();
@@ -19,6 +20,7 @@ export class App {
   reset() {
     this.todoDescription = '';
     this.todoDueDate = null;
+    this.todoDone = false;
   }
 
   removeTodo(todo) {
