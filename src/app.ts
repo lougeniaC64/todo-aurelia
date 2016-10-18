@@ -1,5 +1,4 @@
 import {Todo} from './todo';
-import {config} from './config';
 
 export class App {
   heading = 'Todos';
