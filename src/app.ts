@@ -28,11 +28,4 @@ export class App {
       this.todos.splice(index, 1);
     }
   }
-
-  getTodoInfo(todo) {
-    if (todo.dueDate) {
-      return todo.description + ' (Due date: ' + todo.dueDate + ')';
-    }
-    return todo.description;
-  }
 }
