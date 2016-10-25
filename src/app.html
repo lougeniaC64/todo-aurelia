@@ -1,7 +1,7 @@
 <template>
-  <h1>${heading}</h1>
+  <h1 class="center">${heading}</h1>
 
-  <form submit.trigger="addTodo()">
+  <form class="center" submit.trigger="addTodo()">
     <input type="text" value.bind="todoDescription"/>
     <input type="date" value.bind="todoDueDate" />
     <button type="submit" class="btn btn-sm btn-default" aria-label="Left Align">
