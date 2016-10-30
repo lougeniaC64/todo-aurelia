@@ -8,7 +8,7 @@
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
     </button>
   </form>
-  <ul>
+  <ul class="center">
     <li repeat.for="todo of todos">
       <input type="checkbox" checked.bind="todo.done">
       <input type="text" class="${todo.done ? 'completed-todo' : 'todo'}" 
