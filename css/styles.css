@@ -5,10 +5,6 @@
     display: inline;
 }
 
-.editable-todo {
-    border-style: solid;
-}
-
 .todo {
     text-decoration: none;
     color: black;
